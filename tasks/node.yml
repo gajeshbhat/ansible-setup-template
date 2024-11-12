@@ -1,0 +1,10 @@
+- name: Install Node
+  apt:
+   name: ['nodejs','npm']
+- name: Install n
+  npm:
+   name: n
+   global: yes
+  become: true
+- name: Enable Node 14 using n
+  shell: n 14    
